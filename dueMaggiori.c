@@ -18,33 +18,34 @@ int main( void ){
 
   i = 0;
   while( i < 10 ){
-  printf( "Inserisci numero : " ); //caricamento elementi nell'array
-  scanf( "%d", &number );
-  array[ i ] = number;
-  i = i + 1;
+    printf( "Inserisci numero : " ); //caricamento elementi nell'array
+    scanf( "%d", &number );
+    array[ i ] = number;
+
+    i++;
   }
 
   i = 0;
   while( i < SIZE - 1 ){
-    j = i + 1;
+  j = i + 1;
     while( j < SIZE ){
       if( array[ i ] < array[ j ] ){
         temp = array[ i ];
         array[ i ] = array[ j ]; //ordinamento
         array[ j ] = temp;
       }
-      j = j + 1;
+      j++;
     }
-    i = i + 1;
+    i++;
   }
 
   i = 1;
   max = array[ 0 ];
-  while( i < 10 ){
+  while( i < SIZE ){
     if( array[ i ] < max && array[ i ] > max2 ){
       max2 = array[ i ];
     }
-    i = i + 1;
+    i++;
   }
 
   printf( "Massimo : %d\n", max );
