@@ -13,8 +13,8 @@ int main( void ){
   printf( "Da che numero devo partire : " );
   scanf( "%d", &number );
 
-  for( int i = number; i > 0; i-- ){
-    printf( "%d\n", i );
+  for( size_t i = number; i > 0; i-- ){
+    printf( "%ld\n", i );
   }
   printf( "%s\n", "Lanciato!" );
 
