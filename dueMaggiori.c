@@ -1,5 +1,4 @@
 /* Due Maggiori
-
 Si scriva un programma in C che prenda
 in input 10 numeri e determini i due maggiori. */
 
@@ -11,30 +10,40 @@ in input 10 numeri e determini i due maggiori. */
 int main( void ){
 
   int number;
-  int max, max2;
-  size_t i;
+  int max  = INT_MIN;
+  int max2 = INT_MIN;
   int temp;
-
-  printf( "Inserisci numero : " );
-  scanf( "%d", &number );
-
-  max  = number;
-  max2 = INT_MIN;
-  temp = number;
+  size_t i, j;
+  int array[ SIZE ];
 
   i = 0;
-  while( i < 9 ){
-  printf( "Inserisci numero : " );
+  while( i < 10 ){
+  printf( "Inserisci numero : " ); //caricamento elementi nell'array
   scanf( "%d", &number );
+  array[ i ] = number;
+  i = i + 1;
+  }
 
-    if( number > max ){
-      max = number;
+  i = 0;
+  while( i < SIZE - 1 ){
+    j = i + 1;
+    while( j < SIZE ){
+      if( array[ i ] < array[ j ] ){
+        temp = array[ i ];
+        array[ i ] = array[ j ]; //ordinamento
+        array[ j ] = temp;
+      }
+      j = j + 1;
     }
-    if( temp < max && temp > max2 ){
-      max2 = temp;
-    }
-    temp = number;
+    i = i + 1;
+  }
 
+  i = 1;
+  max = array[ 0 ];
+  while( i < 10 ){
+    if( array[ i ] < max && array[ i ] > max2 ){
+      max2 = array[ i ];
+    }
     i = i + 1;
   }
 
