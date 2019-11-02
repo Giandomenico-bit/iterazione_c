@@ -14,7 +14,7 @@ int main( void ){
   scanf( "%d", &number );
   max = number;
 
-  for( size_t i = 0; i < 8; i++ ){
+  for( size_t i = 0; i < 9; i++ ){
 
     printf( "Inserisci numero : " );
     scanf( "%d", &number );
