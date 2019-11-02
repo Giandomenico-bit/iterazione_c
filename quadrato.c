@@ -10,6 +10,7 @@ int main( void ){
 
   char ch;
   int side;
+  size_t i, j;
 
   printf( "Disegna un quadrato con : " );
   scanf( "%c", &ch );
@@ -21,13 +22,15 @@ int main( void ){
 
   }while( side <= 0 || side > 20 );
 
-  for( size_t i = 1; i <= side; i++ ){
-    for( size_t j = 1; j <= side; j++ ){
+  i = 1;
+  while( i <= side ){
+    j = 1;
+    while( j <= side ){
       printf( "%c", ch );
+      j++;
     }
     puts( "" );
+    i++;
   }
-
-
   return 0;
 }
