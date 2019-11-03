@@ -27,7 +27,7 @@ int main( void ){
     if( temp == 0 || temp == 1 ){
         ;
     } else break;
-      temp = temp / 10;
+    temp = temp / 10;
     }
 
   }while( temp > 1 );
