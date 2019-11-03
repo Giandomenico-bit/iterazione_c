@@ -42,7 +42,6 @@ int main( void ){
     decimale = decimale + potenza;
 
     ind++;
-
     potenza = potenza * 2;
     temp = temp / 10;
   }
