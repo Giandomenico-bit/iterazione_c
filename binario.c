@@ -17,18 +17,16 @@ int main( void ){
 
   do{
 
-      printf( "Inserisci numero binario : " );
-      scanf( "%d", &value );
-      temp = value;
+    printf( "Inserisci numero binario : " );
+    scanf( "%d", &value );
+    temp = value;
 
-      while( temp != 0 ){
-      temp = value % 10;
+    while( temp != 0 ){
+    temp = value % 10;
 
-      if( temp == 0 || temp == 1 ){
+    if( temp == 0 || temp == 1 ){
         ;
-      } else {
-        break;
-      }
+    } else break;
       temp = temp / 10;
     }
 
@@ -49,7 +47,6 @@ int main( void ){
   }
 
   printf( "%d( 2 ) = %d( 10 )\n", value, decimale );
-
 
   return 0;
 }
