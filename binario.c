@@ -11,7 +11,7 @@ int main( void ){
 
   int value;
   int temp;
-  int potenza, cifra;
+  int potenza = 1, cifra;
   int decimale = 0;
   size_t ind;
 
@@ -38,11 +38,12 @@ int main( void ){
   while( temp != 0 ){
 
     cifra = temp % 10;
-    potenza = pow( 2, ind );
     potenza = potenza * cifra;
     decimale = decimale + potenza;
 
     ind++;
+
+    potenza = potenza * 2;
     temp = temp / 10;
   }
 
