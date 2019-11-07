@@ -4,34 +4,33 @@ Si scriva un programma C che legga in input
 un intero positivo di cinque cifre e determini se è palindromo. */
 
 #include <stdio.h>
-#include <math.h>
 
 int main( void ){
 
   int value;
-  int reverse = 0;
-  int numCifre;
-  int cifra, potenza, temp;
+  int cifra1, cifra2, cifra3, cifra4;
 
-  printf( "Inserisci numero : " );
-  scanf( "%d", &value );
+  do{
+    printf( "Inserisci numero : " );
+    scanf( "%d", &value );
 
-  numCifre = log10( value );
-  temp = value;
-  // calcolo inverso di un numero
-  while( temp != 0 ){
+  }while( value < 10000 || value > 99999 );
 
-    cifra = temp % 10;
+  cifra1 = value % 10;
+  value = value / 10;
 
-    potenza = pow( 10, numCifre );
-    potenza = potenza * cifra;
-    reverse = reverse + potenza;
+  cifra2 = value % 10;
+  value = value / 10;
 
-    temp = temp / 10;
-    numCifre = numCifre - 1;
-  }
+  value = value / 10;
 
-  if( value == reverse ) printf( "Numero palindromo\n" );
+  cifra3 = value % 10;
+  value = value / 10;
+
+  cifra4 = value % 10;
+  value = value / 10;
+
+  if( cifra1 == cifra4 && cifra3 == cifra2 ) printf( "Numero palindromo\n" );
   else printf( "Numero non palindromo\n" );
 
   return 0;
