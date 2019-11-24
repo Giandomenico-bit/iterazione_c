@@ -9,17 +9,17 @@ intero, conti di 3 in 3 per cinque volte. */
 int main( void ){
 
   int startNumber;
-  size_t i;
+  int count = 0;
 
   printf( "Numero di partenza : " );
   scanf( "%d", &startNumber );
 
-  i = startNumber;
+  while( count < 5 ){
 
-  while( i <= 18 ){
-    printf( "%ld\n", i );
+    printf( "%d\n", startNumber );
 
-    i += 3;
+    startNumber = startNumber + 3;
+    count = count + 1;
   }
 
   return 0;
