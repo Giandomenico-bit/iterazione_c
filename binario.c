@@ -11,13 +11,16 @@ int main( void ){
 
   int value;
   int temp;
-  int potenza = 1, cifra;
-  int decimale = 0;
+  int cifraUltima;
+  int sum = 0;
+  int bit;
+  int cifre, count = 0;
 
   do{
 
     printf( "Inserisci numero binario : " );
     scanf( "%d", &value );
+
     temp = value;
 
     while( temp != 0 ){
@@ -29,20 +32,21 @@ int main( void ){
     temp = temp / 10;
     }
 
-  }while( temp > 1 );
+  }while( temp > 1 || value < 0 );
 
-  temp = value;
-  while( temp != 0 ){
+    temp = value;
+    cifre = log10( value );
+    while( count < cifre + 1 ){
 
-    cifra = temp % 10;
-    potenza = potenza * cifra;
-    decimale = decimale + potenza;
+        cifraUltima = temp % 10;
+        bit = cifraUltima << count;
+        sum = sum + bit; //somma dei bit
 
-    potenza = potenza * 2;
-    temp = temp / 10;
-  }
+        temp = temp / 10; //decremento cifre
+        count = count + 1;
+    }
 
-  printf( "%d( 2 ) = %d( 10 )\n", value, decimale );
+  printf( "%d( 2 ) = %d( 10 )\n", value, sum );
 
   return 0;
 }
