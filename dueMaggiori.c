@@ -3,7 +3,7 @@ Si scriva un programma in C che prenda
 in input 10 numeri e determini i due maggiori. */
 
 #include <stdio.h>
-#include <limits.h>
+#include <limits.>
 
 int main( void ){
 
@@ -12,6 +12,7 @@ int main( void ){
   int numero;
   int numero2;
   int i;
+  int temp;
 
   printf( "Inserisci numero : " );
   scanf( "%d", &numero );
@@ -32,11 +33,11 @@ int main( void ){
     max2 = numero;
   }
 
-  int temp = numero2;
+  temp = numero2;
 
   i = 0;
   while( i < 8 ){
-    
+
     printf( "Inserisci numero : " );
     scanf( "%d", &numero );
 
