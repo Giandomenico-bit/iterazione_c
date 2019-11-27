@@ -1,3 +1,12 @@
+/*
+/* Due Maggiori
+Si scriva un programma in C che prenda
+in input 10 numeri e determini i due maggiori.
+
+FUNZIONANTE
+
+*/
+
 #include <stdio.h>
 #include <limits.h>
 
