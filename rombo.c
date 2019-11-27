@@ -33,7 +33,7 @@ int main( void ){
     scanf( "%d", &row );
     value = row % 2;
 
-  }while( value == 0 );
+  }while( value == 0 || row < 1 || row > 19 );
 
   for( i = 1; i <= row; i = i + 2 ){
     for( k = row; k > i; k = k - 2 ){
