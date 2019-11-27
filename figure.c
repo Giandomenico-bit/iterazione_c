@@ -57,40 +57,40 @@ int main( void ){
     for( j = 1; j <= i; j++ ){
         putchar( '*' );
     }
-    puts( "" );
+    putchar( '\n' );
   }
 
-  puts( "" );
+  putchar( '\n' );
 
   for( i = 10; i >= 1; i-- ){   // seconda figura
     for( j = 1; j <= i; j++ ){
         putchar( '*' );
     }
-    puts( "" );
+    putchar( '\n' );
   }
 
-  puts( "" );
+  putchar( '\n' );
 
   for( i = 10; i >= 1; i-- ){   // terza figura
     for( j = 1; j <= i; j++ ){
         putchar( '*' );
     }
-    puts( "" );
+    putchar( '\n' );
     for( k = 10; k >= i; k-- ){
-      printf( " " );
+      putchar( ' ' );
     }
   }
 
-  puts( "" );
+  putchar( '\n' );
 
   for( i = 1; i <= 10; i++ ){   // quarta figura
     for( k = 9; k >= i; k-- ){
-      printf( " " );
+      putchar( ' ' );
     }
     for( j = 1; j <= i; j++ ){
         putchar( '*' );
     }
-    puts( "" );
+    putchar( '\n' );
   }
 
   return 0;
