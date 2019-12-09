@@ -7,37 +7,35 @@ FUNZIONANTE IN PARTE
 */
 
 #include <stdio.h>
-#include <limits.>
 
 int main( void ){
 
   int max;
   int max2;
   int numero;
-  int numero2;
   int i;
   int temp;
 
   printf( "Inserisci numero : " );
   scanf( "%d", &numero );
 
-  printf( "Inserisci numero : " );
-  scanf( "%d", &numero2 );
+  temp = numero;
 
-  if( numero > numero2 ){
+  printf( "Inserisci numero : " );
+  scanf( "%d", &numero );
+
+  if( numero > temp ){
     max  = numero;
-    max2 = numero2;
+    max2 = temp;
   }
-  else if( numero2 > numero ){
-    max  = numero2;
+  else if( temp > numero ){
+    max  = temp;
     max2 = numero;
   }
   else{
-    max  = numero;
-    max2 = numero;
+    max  = temp;
+    max2 = temp;
   }
-
-  temp = numero2;
 
   i = 0;
   while( i < 8 ){
@@ -55,7 +53,6 @@ int main( void ){
 
   printf( "Massimo  = %d\n", max );
   printf( "Secondo massimo = %d\n", max2 );
-
 
   return 0;
 }
