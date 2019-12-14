@@ -24,7 +24,7 @@ int main( void ){
 
   int value;
   float pigreco = 0;
-  int exp;
+  int exp = -1;
   int i, j;
 
   printf( "Approssimazione di Pi Greco\n" );
@@ -33,7 +33,7 @@ int main( void ){
   scanf( "%d", &value );
 
   for( i = 0, j = 1; i < value; i++, j = j + 2 ){
-    exp = pow( -1, i );
+    exp = -exp;
 
     if( exp == -1 ){
         pigreco = pigreco - 4.0/( float )j;
