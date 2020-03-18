@@ -2,8 +2,6 @@
 Si scriva un programma in C che prenda
 in input 10 numeri e determini i due maggiori.
 
-FUNZIONANTE IN PARTE
-
 */
 
 #include <stdio.h>
@@ -46,7 +44,7 @@ int main( void ){
 	}
 	i = i + 1;
    } 
-
+	
   printf( "max = %d\n", max );
   printf( "max2 = %d\n", max2 );
   
