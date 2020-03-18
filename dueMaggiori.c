@@ -22,8 +22,8 @@ int main( void ){
   max = numero;
 
   if( max < max2 ){
-	  max2 = numero;
-	  max = numero2;
+      max2 = numero;
+      max = numero2;
   }
   
   i = 0;
