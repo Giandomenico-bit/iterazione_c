@@ -39,7 +39,7 @@ int main( void ){
 	else if( max == max2 ){
 		if( numero < max2) max2 = numero;
 	}
-	else if( numero < max && numero > max2 ){
+	else if( numero > max2 ){
 		max2 = numero;
 	}
 	i = i + 1;
