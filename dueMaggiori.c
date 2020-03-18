@@ -10,49 +10,45 @@ FUNZIONANTE IN PARTE
 
 int main( void ){
 
-  int max;
-  int max2;
-  int numero;
+  int max, max2;
+  int numero, numero2;
   int i;
-  int temp;
-
-  printf( "Inserisci numero : " );
+  
+  printf( "Inserisci primo numero : " );
   scanf( "%d", &numero );
+  
+  printf( "Inserisci primo numero : " );
+  scanf( "%d", &numero2 );
+  
+  max2 = numero2;
+  max = numero;
 
-  temp = numero;
-
-  printf( "Inserisci numero : " );
-  scanf( "%d", &numero );
-
-  if( numero > temp ){
-    max  = numero;
-    max2 = temp;
+  if( max < max2 ){
+	  max2 = numero;
+	  max = numero2;
   }
-  else if( temp > numero ){
-    max  = temp;
-    max2 = numero;
-  }
-  else{
-    max  = temp;
-    max2 = temp;
-  }
-
+  
   i = 0;
   while( i < 8 ){
+	
+	printf( "Inserisci primo numero : " );
+	scanf( "%d", &numero );
+  
+	if( numero > max ){
+		max2 = max;
+		max = numero;
+	}
+	else if( max == max2 ){
+		if( numero < max2) max2 = numero;
+	}
+	else if( numero < max && numero > max2 ){
+		max2 = numero;
+	}
+	i = i + 1;
+   } 
 
-    printf( "Inserisci numero : " );
-    scanf( "%d", &numero );
-
-    if( numero > max ){
-      max2 = max;
-      max = numero;
-    } else if ( numero < max && numero > max2 ) max2 = numero;
-
-    i++;
-  }
-
-  printf( "Massimo  = %d\n", max );
-  printf( "Secondo massimo = %d\n", max2 );
-
+  printf( "max = %d\n", max );
+  printf( "max2 = %d\n", max2 );
+  
   return 0;
 }
