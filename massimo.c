@@ -9,17 +9,21 @@ int main( void ){
 
   int max;
   int number;
+  size_t i;
 
   printf( "Inserisci numero : " );
   scanf( "%d", &number );
   max = number;
 
-  for( size_t i = 0; i < 9; i++ ){
+  i = 0;
+  while( i < 9 ){
 
     printf( "Inserisci numero : " );
     scanf( "%d", &number );
 
     if( number > max ) max = number;
+
+    i++;
   }
 
   printf( "Massimo : %d\n", max );

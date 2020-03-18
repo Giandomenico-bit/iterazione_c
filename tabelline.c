@@ -9,11 +9,15 @@ int main( void ){
   size_t i;
   size_t j;
 
-  for( i = 1; i <= 10; i++ ){
-    for( j = 1; j<= 10; j++ ){
+  i = 1;
+  while( i <= 10 ){
+    j = 1;
+    while( j <= 10 ){
       printf( "%-2ld ", i * j );
+      j++;
     }
     puts( "" );
+    i++;
   }
 
   return 0;

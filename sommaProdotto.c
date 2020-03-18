@@ -3,12 +3,13 @@
 int main( void ){
 
   int i;
-  int sommaPari, prodottoDispari;
+  int sommaPari;
+  int prodottoDispari = 1;
 
-  for( i = 0; i <= 30; i = i + 2 )
-    sommaPari = sommaPari + i;
+  sommaPari = ( 30 * ( 30 + 2 ) ) / 4;
+
   for( i = 1; i <= 15; i = i + 3 )
-    prodottoDispari = prodottoDispari + i;
+       prodottoDispari = prodottoDispari * i;
 
   printf( "Somma : %d\n", sommaPari );
   printf( "Prodotto : %d\n", prodottoDispari );

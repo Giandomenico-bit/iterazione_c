@@ -10,7 +10,7 @@ int main( void ){
 
   int value;
   int cifra;
-  size_t count = 0;
+  int count = 0;
 
   printf( "Inserisci numero : " );
   scanf( "%d", &value );
@@ -23,7 +23,7 @@ int main( void ){
     value = value / 10;
   }
 
-  printf( "Cifre contate : %ld\n", count );
+  printf( "Cifre contate : %d\n", count );
 
   return 0;
 }
