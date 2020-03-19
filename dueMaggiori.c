@@ -9,22 +9,20 @@ in input 10 numeri e determini i due maggiori.
 int main( void ){
 
   int max, max2;
-  int numero, numero2;
+  int numero;
   int i;
   
   printf( "Inserisci primo numero : " );
   scanf( "%d", &numero );
   
-  printf( "Inserisci primo numero : " );
-  scanf( "%d", &numero2 );
-  
-  max2 = numero2;
   max = numero;
-
-  if( max < max2 ){
-      max2 = numero;
-      max = numero2;
-  }
+  
+  printf( "Inserisci primo numero : " );
+  scanf( "%d", &numero );
+  
+  max2 = numero;
+  
+  if( max2 > max ) max = numero;
   
   i = 0;
   while( i < 8 ){
