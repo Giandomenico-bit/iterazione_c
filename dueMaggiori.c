@@ -26,22 +26,20 @@ int main( void ){
   
   i = 0;
   while( i < 8 ){
-	
-     	printf( "Inserisci primo numero : " );
+	  
+    	printf( "Inserisci primo numero : " );
      	scanf( "%d", &numero );
   
 	if( numero > max ){
-            max2 = max;
-	    max = numero;
+         max2 = max;
+	     max = numero;
 	}
 	else if( max == max2 ){
-	    if( numero < max2) max2 = numero;
-	    
+	     if( numero < max2) max2 = numero;
 	}
 	else if( numero > max2 && numero < max ){
-		max2 = numero;
+		 max2 = numero;
 	}
-	
 	i = i + 1;
    } 
 	
