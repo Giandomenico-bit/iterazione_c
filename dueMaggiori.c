@@ -29,18 +29,22 @@ int main( void ){
   i = 0;
   while( i < 8 ){
 	
-	printf( "Inserisci primo numero : " );
-	scanf( "%d", &numero );
+     	printf( "Inserisci primo numero : " );
+     	scanf( "%d", &numero );
   
 	if( numero > max ){
-		max2 = max;
-		max = numero;
+            max2 = max;
+	    max = numero;
 	}
 	else if( max == max2 ){
-		if( numero < max2) max2 = numero;
+	    if( numero < max2) max2 = numero;
 	}
 	else if( numero > max2 ){
+<<<<<<< HEAD
 		max2 = numero;
+=======
+	    max2 = numero;
+>>>>>>> 35b532844f46c3a924e2caae3a4112da2178c85e
 	}
 	i = i + 1;
    } 
