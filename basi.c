@@ -29,7 +29,7 @@ int main( void ){
   while( value < 256 ){
 	  incremento = 128;
 	  for( int c = 1; c <= 8; c++ ){
-		   printf( value & incremento ? "1" : "0" );
+	       printf( value & incremento ? "1" : "0" );
 	       incremento = incremento >> 1;
 	  }
 	  puts( "" );
@@ -38,25 +38,25 @@ int main( void ){
   
   puts( "" );
  
-	for( int i = 0; i <= 3; i++ ){
-		for( int j = 0; j <= 7; j++ ){
-			for( int k = 0; k <= 7; k++ ){
-				printf( "%d%d%d\n", i, j, k );
-			}
-		}
-	}
+  for( int i = 0; i <= 3; i++ ){
+    for( int j = 0; j <= 7; j++ ){
+       for( int k = 0; k <= 7; k++ ){
+	   printf( "%d%d%d\n", i, j, k );
+       }
+     }
+   }
 	
-	puts( "" );
+   puts( "" );
 	
-	value = 0;
-	while( value < 256 ){
+   value = 0;
+   while( value < 256 ){
 		
-		quoziente = value / 16;
-		resto = value % 16;
+   	quoziente = value / 16;
+   	resto = value % 16;
 		
-		printf( "%c%c\n", vect[ quoziente ], vect[ resto ] );
-		value = value + 1;
-	}
+   	printf( "%c%c\n", vect[ quoziente ], vect[ resto ] );
+   	value = value + 1;
+    }
 	
   return 0;
 }
