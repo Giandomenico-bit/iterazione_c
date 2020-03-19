@@ -1,3 +1,5 @@
-CC=gcc
-CFLAGS= -std=c99 -Wall -pedantic
-LDLIBS=math.h
+CFLAGS = -Wall -ansi -pedantic
+CC = gcc
+
+Compilazione Make :
+	  $(CC) $(CFLAGS) -o file file.c
