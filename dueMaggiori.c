@@ -38,14 +38,12 @@ int main( void ){
 	}
 	else if( max == max2 ){
 	    if( numero < max2) max2 = numero;
+	    
 	}
 	else if( numero > max2 ){
-<<<<<<< HEAD
 		max2 = numero;
-=======
-	    max2 = numero;
->>>>>>> 35b532844f46c3a924e2caae3a4112da2178c85e
 	}
+	
 	i = i + 1;
    } 
 	
