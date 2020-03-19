@@ -38,7 +38,7 @@ int main( void ){
 	    if( numero < max2) max2 = numero;
 	    
 	}
-	else if( numero > max2 ){
+	else if( numero > max2 && numero < max ){
 		max2 = numero;
 	}
 	
