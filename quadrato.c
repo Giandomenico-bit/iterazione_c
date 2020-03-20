@@ -8,12 +8,12 @@ e poi lo disegni con un carattere a piacere. */
 
 int main( void ){
 
-  char ch;
+  int ch;
   int side;
   size_t i, j;
 
   printf( "Disegna un quadrato con : " );
-  scanf( "%c", &ch );
+  scanf( "%lc", &ch );
 
   do {
 
