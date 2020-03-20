@@ -26,10 +26,10 @@ int main( void ){
   while( i <= side ){
     j = 1;
     while( j <= side ){
-      printf( "%c", ch );
+       putchar( ch );
       j++;
     }
-    putchar( " " );
+    putchar( '\n' );
     i++;
   }
   return 0;
