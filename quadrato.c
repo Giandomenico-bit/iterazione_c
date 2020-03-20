@@ -29,7 +29,7 @@ int main( void ){
       printf( "%c", ch );
       j++;
     }
-    puts( "" );
+    putchar( " " );
     i++;
   }
   return 0;
