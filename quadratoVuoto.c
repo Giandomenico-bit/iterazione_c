@@ -8,13 +8,13 @@ solo il perimetro con un carattere a piacere. */
 
 int main( void ){
 
-  char ch;
+  int ch;
   int side;
   int numRiga = 0;
   int numColonna;
 
   printf( "Disegna quadrato con : " );
-  scanf( "%c", &ch );
+  scanf( "%lc", &ch );
 
   do{
 
@@ -25,21 +25,22 @@ int main( void ){
 
 while (numRiga < side ) {
 
-  printf("*");
+  putchar( ch );
   numColonna = 1;
 
   while (numColonna < (side - 1)) {
 
-    if (numRiga == 0 || numRiga == (side - 1)) {
-      printf("*");
+    if ( numRiga == 0 || numRiga == (side - 1)) {
+      putchar( ch );
     }
     else {
-      printf(" ");
+      putchar( ' ' );
     }
     numColonna++;
   }
 
-  printf("*\n");
+  putchar( ch );
+  putchar( '\n' );
   numRiga++;
 }
 
