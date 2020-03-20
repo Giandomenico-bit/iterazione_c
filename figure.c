@@ -2,6 +2,7 @@
 Figure
 Utilizzando solo la funzione putchar(), si scriva un programma che stampi le seguenti figure.
 
+
 *
 **
 ***
