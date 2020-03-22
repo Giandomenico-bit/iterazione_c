@@ -22,7 +22,11 @@ int main( void ){
   
   max2 = numero;
   
-  if( max2 > max ) max = numero;
+  if( max2 > max ){
+	  max2 = max;
+	  max = numero;
+  }
+	  
   
   i = 0;
   while( i < 8 ){
