@@ -10,7 +10,7 @@ int main( void ){
 
   int ch;
   int side;
-  int numRiga = 0;
+  int numRiga;
   int numColonna;
 
   printf( "Disegna quadrato con : " );
@@ -23,26 +23,41 @@ int main( void ){
 
   }while( side <= 0 || side > 20 );
 
-while (numRiga < side ) {
 
-  putchar( ch );
-  numColonna = 1;
-
-  while (numColonna < (side - 1)) {
-
-    if ( numRiga == 0 || numRiga == (side - 1)) {
-      putchar( ch );
-    }
-    else {
-      putchar( ' ' );
-    }
-    numColonna++;
+  numRiga = 0;
+  // Prima riga
+  while( numRiga <  side ){
+	  putchar( ch );
+	  numRiga++;
   }
-
-  putchar( ch );
   putchar( '\n' );
-  numRiga++;
-}
-
+  
+  numRiga = 2;
+  numColonna = 1;
+  
+  // righe intermedie
+  while( numRiga < side ){
+	  putchar( ch );
+	  // Spazi
+	  while( numColonna < side - 1 ){
+		  putchar( ' ' );
+		  numColonna++;
+	  }
+	  numColonna = 1;
+	  numRiga++;
+	  
+	  putchar( ch );
+	  putchar( '\n' );
+	  
+  }
+  
+  // ultima riga
+  numRiga = 0;
+  while( numRiga <  side ){
+	  putchar( ch );
+	  numRiga++;
+  }
+  puts(" ");
+  
   return 0;
 }
