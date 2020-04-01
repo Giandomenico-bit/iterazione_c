@@ -33,19 +33,17 @@ int main( void ){
   putchar( '\n' );
   
   numRiga = 2;
-  numColonna = 1;
   
   // righe intermedie
   while( numRiga < side ){
 	  putchar( ch );
 	  // Spazi
+	  numColonna = 1;
 	  while( numColonna < side - 1 ){
 		  putchar( ' ' );
 		  numColonna++;
 	  }
-	  numColonna = 1;
 	  numRiga++;
-	  
 	  putchar( ch );
 	  putchar( '\n' );
 	  
