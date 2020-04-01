@@ -57,7 +57,7 @@ int main( void ){
 	  putchar( ch );
 	  numRiga++;
   }
-  puts(" ");
+  putchar( '\n' );
   
   return 0;
 }
