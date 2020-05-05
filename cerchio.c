@@ -23,8 +23,8 @@ int main( void ){
   circonferenza = 2.0 * Pi * raggio;
   area = Pi * raggio * raggio;
 
-  printf( "Circonferenza : %.3lf\n", circonferenza );
-  printf( "Area : %.3lf\n", area );
+  printf( "Circonferenza : %.3f\n", circonferenza );
+  printf( "Area : %.3f\n", area );
 
   return 0;
 }
