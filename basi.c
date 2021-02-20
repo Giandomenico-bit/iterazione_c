@@ -20,43 +20,23 @@ Esempio di output:
 
 int main( void ){
 
-  int value = 0;
-  int incremento;
-  char vect[ 16 ] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
-  int quoziente, resto;
-  
-  
-  while( value < 256 ){
-	  incremento = 128;
-	  for( int c = 1; c <= 8; c++ ){
-	       printf( value & incremento ? "1" : "0" );
-	       incremento = incremento >> 1;
+  int passi = 0;
+  unsigned int maschera;
+
+  while( passi < 256 ) {
+    printf( "%d\t", passi );
+
+    maschera = 1 << 7; // 10000000
+	  for( int c = 0; c < 8; c++ ) {
+	       putchar( passi & maschera ? '1' : '0' );
+	       maschera >>= 1;
 	  }
-	  puts( "" );
-	  value = value + 1;
+
+    printf( "\t%o\t", passi );
+    printf( "%X\n", passi );
+
+    passi++;
   }
-  
-  puts( "" );
- 
-  for( int i = 0; i <= 3; i++ ){
-    for( int j = 0; j <= 7; j++ ){
-       for( int k = 0; k <= 7; k++ ){
-	   printf( "%d%d%d\n", i, j, k );
-       }
-     }
-   }
-	
-   puts( "" );
-	
-   value = 0;
-   while( value < 256 ){
-		
-   	quoziente = value / 16;
-   	resto = value % 16;
-		
-   	printf( "%c%c\n", vect[ quoziente ], vect[ resto ] );
-   	value = value + 1;
-    }
-	
+
   return 0;
 }
