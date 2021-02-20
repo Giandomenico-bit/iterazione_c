@@ -9,41 +9,26 @@ calcoli il corrispondente valore in decimale. */
 
 int main( void ){
 
-  int value;
-  int valueTemp, ultimaCifra;
-  int sum;
-  int bit, exp;
+  unsigned int binario, decimale, esponente;
+  unsigned int res = 0;
+  unsigned int esponente = 0;
 
-  do{
+  printf( "%s", "Inserisci numero binario : " );
+  scanf( "%u", &binario );
 
-    printf( "Inserisci numero binario : " );
-    scanf( "%d", &value );
+  do {
 
-    valueTemp = value;
-    while( valueTemp != 0 ){
+    resto = binario % 10;
 
-    ultimaCifra = value % 10;
-    if( ultimaCifra != 0 && ultimaCifra != 1 ) break;
-        valueTemp = valueTemp / 10;
-    }
+    decimale = pow( 2, esponente ) * resto;
+    res = res + decimale;
 
-  sum = 0;
-  exp = 0;
-  
-  }while( valueTemp > 1 || value < 0 );
+    esponente = esponente + 1;
+    binario = binario / 10;
 
-    valueTemp = value;
-    while( valueTemp != 0 ){
+  } while( binario != 0 );
 
-        ultimaCifra = valueTemp % 10;
-        bit = ultimaCifra << exp;
-        sum = sum + bit; //somma dei bit
-
-        valueTemp = valueTemp / 10; //decremento cifre
-        exp = exp + 1;
-    }
-
-  printf( "%d( 2 ) = %d( 10 )\n", value, sum );
+  printf( "Risultato : %d\n", res );
 
   return 0;
 }
