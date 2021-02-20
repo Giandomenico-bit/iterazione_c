@@ -8,18 +8,15 @@ intero, conti di 3 in 3 per cinque volte. */
 
 int main( void ){
 
-  int startNumber;
-  int count = 0;
+  int inizio;
+  int incremento = 0;
 
-  printf( "Numero di partenza : " );
-  scanf( "%d", &startNumber );
+  printf( "%s", "Numero di partenza : " );
+  scanf( "%d", &inizio );
 
-  while( count < 5 ){
-
-    printf( "%d\n", startNumber );
-
-    startNumber = startNumber + 3;
-    count = count + 1;
+  while( incremento++ < 5 ) {
+    inizio = inizio + 3;
+    printf( "%d\n", inizio );
   }
 
   return 0;
