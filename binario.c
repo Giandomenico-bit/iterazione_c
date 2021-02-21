@@ -9,9 +9,7 @@ calcoli il corrispondente valore in decimale. */
 
 int main( void ){
 
-  unsigned int binario, decimale, temp;
-  unsigned int res, resto;
-  unsigned int esponente;
+  unsigned int binario, decimale, temp, res, resto, esponente;
   unsigned flag = 0;
 
   do {
@@ -45,7 +43,7 @@ int main( void ){
     res = res + decimale;
 
     // avanzo di una posizione
-    esponente = esponente + 1;
+    esponente++;
     binario = binario / 10;
 
   } while( binario != 0 );
