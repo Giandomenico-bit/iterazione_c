@@ -12,9 +12,9 @@ int main( void ){
 
   char* str = "hello world!";
 
-  for( int i = 0; str[ i ] != '\0'; i++ ){
-    putchar( str[ i ] );
-    puts( "" );
+  for( int c = 0; str[ c ] != '\0'; c++ ){
+    putchar( str[ c ] );
+    putchar( '\n' );
   }
 
   return 0;
