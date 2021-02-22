@@ -24,13 +24,13 @@ int main( void ){
   unsigned int maschera;
 
   while( passi < 256 ) {
-      printf( "%d\t", passi );
+    printf( "%d\t", passi );
 
-      maschera = 1 << 7; // 10000000
-      for( int c = 0; c < 8; c++ ) {
-	  putchar( passi & maschera ? '1' : '0' );
-	  maschera >>= 1;
-      }
+    maschera = 1 << 7; // 10000000
+    for( int c = 0; c < 8; c++ ) {
+	       putchar( passi & maschera ? '1' : '0' );
+	       maschera >>= 1;
+    }
 
     printf( "\t%o\t", passi );
     printf( "%X\n", passi );
