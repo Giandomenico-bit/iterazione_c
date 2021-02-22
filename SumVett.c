@@ -15,7 +15,6 @@ int main( void ){
   float media;
 
   somma = 0;
-  media = 0.0;
 
   printf( "%s\n", "Inserisci 10 valori interi : " );
 
