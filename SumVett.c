@@ -11,30 +11,31 @@ e infine stampi tutti i dati e i risultati.
 
 int main( void ){
 
-  int array[ 10 ];
-  int media, somma = 0;
-  int i;
+  int array[ 10 ], somma, i;
+  float media;
 
-  puts( "Inserisci 10 valori interi :" );
-  puts( "" );
-  for( i = 0; i < 10; i++ ){
-    printf( "? " );
-    scanf( "%d", &array[ i ] );
-    somma = somma + array[ i ];
+  somma = 0;
+  media = 0.0;
+
+  printf( "%s\n", "Inserisci 10 valori interi : " );
+
+  for( i = 0; i < 10; i++ ) {
+      printf( "%s", "? " );
+      scanf( "%d", &array[ i ] );
+      somma = somma + array[ i ];
   }
 
-  puts( "Dati iniziali :" );
-  puts( "" );
-  for( i = 0; i < 10; i++ ){
-    printf( "array[ %d ] = %d\n", i, array[ i ] );
-  }
+  printf( "\n%s\n", "Dati iniziali :" );
 
-  puts( "" );
+  for( i = 0; i < 10; i++ )
+      printf( "array[ %d ] = %d\n", i, array[ i ] );
 
-  media = somma / 10;
+  putchar( '\n' );
+
+  media = ( float )somma / 10.0;
 
   printf( "Somma : %d\n", somma );
-  printf( "Media : %d\n", media );
+  printf( "Media : %.2f\n", media );
 
   return 0;
 }
