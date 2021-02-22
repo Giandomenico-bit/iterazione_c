@@ -13,7 +13,7 @@ int main( void ){
   printf( "Da che numero devo partire : " );
   scanf( "%d", &inizio );
 
-  for( int i = number; i > 0; i-- )
+  for( int i = inizio; i > 0; i-- )
        printf( "%d\n", i );
   printf( "%s\n", "Lanciato!" );
 
