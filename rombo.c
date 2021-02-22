@@ -23,38 +23,33 @@ Numero di righe (dispari 1-19): 7
 
 int main( void ){
 
-  int row;
-  int value;
+  int riga, value;
   int i, j, k;
 
-  do{
+  do {
+    printf( "%s", "Numero righe ( dispari 1-19 ) : " );
+    scanf( "%d", &riga );
 
-    printf( "Numero righe ( dispari 1-19 ) : " );
-    scanf( "%d", &row );
-    value = row % 2;
+    value = riga % 2;
 
-  }while( value == 0 || row < 1 || row > 19 );
+  } while( value == 0 || riga < 1 || riga > 19 );
 
-  for( i = 1; i <= row; i = i + 2 ){
-    for( k = row; k > i; k = k - 2 ){
-      putchar( ' ' );
-    }
-    for( j = 1; j <= i; j++ ){
-      putchar( '*' );
-    }
-    puts( "" );
+  for( i = 1; i <= riga; i = i + 2 ) {
+    for( k = riga; k > i; k = k - 2 )
+        putchar( ' ' );
+    for( j = 1; j <= i; j++ )
+        putchar( '*' );
+    putchar( '\n' );
   }
 
-  row = row - 2;
+  riga = riga - 2;
 
-  for( i = row; i >= 1; i = i - 2 ){
-    for( k = row; k >= i; k = k - 2 ){
-      putchar( ' ' );
-    }
-    for( j = 1; j <= i; j++ ){
-      putchar( '*' );
-    }
-    puts( "" );
+  for( i = riga; i >= 1; i = i - 2 ) {
+    for( k = riga; k >= i; k = k - 2 )
+        putchar( ' ' );
+    for( j = 1; j <= i; j++ )
+        putchar( '*' );
+    putchar( '\n' );
   }
 
   return 0;
