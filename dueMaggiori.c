@@ -36,7 +36,7 @@ int main( void ){
 	max1 = numero;
     }
     else if( numero > max2 )
-       max2 = numero;
+        max2 = numero;
     i = i + 1;
   }
 
