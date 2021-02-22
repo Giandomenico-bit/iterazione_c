@@ -10,8 +10,7 @@ raggio sia un numero in virgola mobile non negativo. */
 
 int main( void ){
 
-  float circonferenza, area;
-  float raggio;
+  float circonferenza, area, raggio;
 
   do {
     printf( "Inserisci raggio non negativo : " );
