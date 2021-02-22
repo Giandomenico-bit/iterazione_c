@@ -22,22 +22,26 @@ PI: 3.339683
 
 int main( void ){
 
-  int value;
-  float pigreco = 0;
-  int exp = -1;
-  int i, j;
+  int valore, exp, passo, denominatore;;
+  float pigreco = 0.0;
 
-  printf( "Approssimazione di Pi Greco\n" );
-  printf( "π = 4 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ...\n\n" );
-  printf( "Quanti termini vuoi utilizzare? " );
-  scanf( "%d", &value );
+  exp = -1;
+  denominatore = 1;
 
-  for( i = 0, j = 1; i < value; i++, j = j + 2 ){
+  printf( "%s\n", "Approssimazione di Pi Greco" );
+  printf( "%s\n\n", "π = 4 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ..." );
+  printf( "%s", "Quanti termini vuoi utilizzare ? " );
+  scanf( "%d", &valore );
+
+  for( passo = 0; passo < valore; passo++ ) {
     exp = -exp;
 
-    if( exp == -1 ){
-        pigreco = pigreco - 4.0/( float )j;
-    } else pigreco = pigreco + 4.0/( float )j;
+    if( exp == -1 )
+        pigreco = pigreco - 4.0/( float )denominatore;
+    else
+        pigreco = pigreco + 4.0/( float )denominatore;
+
+    denominatore += 2;
   }
 
   printf( "PI : %f\n", pigreco );
