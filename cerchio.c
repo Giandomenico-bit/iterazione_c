@@ -10,15 +10,14 @@ raggio sia un numero in virgola mobile non negativo. */
 
 int main( void ){
 
-  double circonferenza, area;
-  double raggio;
+  float circonferenza, area;
+  float raggio;
 
-  do{
-
+  do {
     printf( "Inserisci raggio non negativo : " );
-    scanf( "%lf", &raggio );
+    scanf( "%f", &raggio );
 
-  }while( raggio < 0.0 );
+  } while( raggio < 0.0 );
 
   circonferenza = 2.0 * Pi * raggio;
   area = Pi * raggio * raggio;
