@@ -12,27 +12,27 @@ Si scriva un programma C che, utilizzando cicli for, generi le sequenze:
 
 int main( void ){
 
-  int i;
+  int c;
 
-  for( i = 1; i <= 8; i++ )
-    printf( "%d ",i );
+  for( c = 1; c <= 8; c++ )
+    printf( "%-5d ", c );
 
-  puts( "" );
+  putchar( '\n' );
 
-  for( i = 3; i <= 24; i = i + 5 )
-    printf( "%d ",i );
+  for( c = 3; c <= 23; c += 5 )
+    printf( "%-5d ", c );
 
-  puts( "" );
+  putchar( '\n' );
 
-  for( i = 20; i >= -10; i = i - 6 )
-    printf( "%d ",i );
+  for( c = 20; c >= -10; c -= 6 )
+    printf( "%-5d ", c );
 
-  puts( "" );
+  putchar( '\n' );
 
-  for( i = 19; i <= 51; i = i + 8 )
-    printf( "%d ",i );
+  for( c = 19; c <= 51; c += 8 )
+    printf( "%-5d ", c );
 
-  puts( "" );
+  putchar( '\n' );
 
   return 0;
 }
