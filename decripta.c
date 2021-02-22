@@ -15,25 +15,23 @@ Numero originale: 1278
 
 int main( void ){
 
-  int value;
-  int cifra1, cifra2, cifra3, cifra4;
-  int temp;
+  int valore, cifra1, cifra2, cifra3, cifra4;
 
-  do{
+  do {
 
     printf( "Inserisci valore di 4 cifre : " );
-    scanf( "%d", &value );
+    scanf( "%d", &valore );
 
-  }while( value < 1000 || value > 9999 );
+  } while( valore < 1000 || valore > 9999 );
 
-  cifra4 = (( value % 10 ) + 3 ) % 10;
-  value = value / 10;
-  cifra3 = (( value % 10 ) + 3 ) % 10;
-  value = value / 10;
-  cifra2 = (( value % 10 ) + 3 ) % 10;
-  value = value / 10;
-  cifra1 = (( value % 10 ) + 3 ) % 10;
-  value = value / 10;
+  cifra4 = ( valore + 3 ) % 10;
+  valore = valore / 10;
+  cifra3 = ( valore + 3 ) % 10;
+  valore = valore / 10;
+  cifra2 = ( valore + 3 ) % 10;
+  valore = valore / 10;
+  cifra1 = ( valore + 3 ) % 10;
+  valore = valore / 10;
 
   printf( "%d%d%d%d\n", cifra3, cifra4, cifra1, cifra2 );
 
