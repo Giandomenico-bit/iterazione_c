@@ -28,8 +28,8 @@ int main( void ){
 
     maschera = 1 << 7; // 10000000
     for( int c = 0; c < 8; c++ ) {
-	       putchar( passi & maschera ? '1' : '0' );
-	       maschera >>= 1;
+	 putchar( passi & maschera ? '1' : '0' );
+	 maschera >>= 1;
     }
 
     printf( "\t%o\t", passi );
