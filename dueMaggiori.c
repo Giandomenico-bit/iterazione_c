@@ -21,8 +21,8 @@ int main( void ){
   max2 = numero;
 
   if( max2 > max1 ) {
-	    max2 = max1;
-	    max1 = numero;
+      max2 = max1;
+      max1 = numero;
   }
 
   i = 0;
@@ -31,13 +31,13 @@ int main( void ){
     printf( "%s", "Inserisci numero : " );
     scanf( "%d", &numero );
 
-	  if( numero > max1 ) {
-        max2 = max1;
-	      max1 = numero;
+    if( numero > max1 ) {
+    	max2 = max1;
+	max1 = numero;
     }
-	  else if( numero > max2 )
-        max2 = numero;
-	  i = i + 1;
+    else if( numero > max2 )
+       max2 = numero;
+    i = i + 1;
   }
 
   printf( "\nmax1 = %d\n", max1 );
