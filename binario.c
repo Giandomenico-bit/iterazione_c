@@ -7,9 +7,9 @@ calcoli il corrispondente valore in decimale. */
 #include <stdio.h>
 #include <math.h>
 
-int main( void ){
+int main( void ) {
 
-  unsigned int binario, decimale, temp, res, resto, esponente;
+  unsigned int binario, decimale, temp, somma, resto, esponente;
   unsigned flag = 0;
 
   do {
@@ -19,7 +19,7 @@ int main( void ){
 
     binario = temp;
 
-    for( ; temp != 0; temp /= 10 ) {
+    while( temp != 0 ) {
         resto = temp % 10;
         if( resto == 1 || resto == 0 )
             flag = 0;
@@ -27,20 +27,21 @@ int main( void ){
             flag = 1;
             break;
         }
+        temp /= 10;
     }
 
   } while( flag == 1 );
 
   esponente = 0;
-  res = 0;
+  somma = 0;
 
   do {
-    // calcolo binario mod 10
+    // calcolo rest( binario, 10 )
     resto = binario % 10;
 
     // trasformo il numero in binario
     decimale = pow( 2, esponente ) * resto;
-    res = res + decimale;
+    somma = somma + decimale;
 
     // avanzo di una posizione
     esponente++;
@@ -48,7 +49,7 @@ int main( void ){
 
   } while( binario != 0 );
 
-  printf( "Risultato : %d\n", res );
+  printf( "Risultato : %d\n", somma );
 
   return 0;
 }
