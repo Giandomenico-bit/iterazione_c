@@ -8,54 +8,43 @@ solo il perimetro con un carattere a piacere. */
 
 int main( void ){
 
-  int ch;
-  int side;
-  int numRiga;
-  int numColonna;
+  char ch;
+  int lato, numRiga, numColonna;
 
   printf( "Disegna quadrato con : " );
-  scanf( "%lc", &ch );
+  scanf( "%c", &ch );
 
-  do{
-
+  do {
     printf( "Inserisci il lato ( min 1, max 20 ) : " );
-    scanf( "%d", &side );
+    scanf( "%d", &lato );
 
-  }while( side <= 0 || side > 20 );
+  } while( lato <= 0 || lato > 20 );
 
 
   numRiga = 0;
   // Prima riga
-  while( numRiga <  side ){
-	  putchar( ch );
-	  numRiga++;
-  }
+  while( numRiga++ < lato )
+	   putchar( ch );
   putchar( '\n' );
-  
+
   numRiga = 2;
-  
+
   // righe intermedie
-  while( numRiga < side ){
+  while( numRiga++ < lato ) {
 	  putchar( ch );
 	  // Spazi
 	  numColonna = 1;
-	  while( numColonna < side - 1 ){
-		  putchar( ' ' );
-		  numColonna++;
-	  }
-	  numRiga++;
+	  while( numColonna++ < lato - 1 )
+		    putchar( ' ' );
 	  putchar( ch );
 	  putchar( '\n' );
-	  
   }
-  
+
   // ultima riga
   numRiga = 0;
-  while( numRiga <  side ){
-	  putchar( ch );
-	  numRiga++;
-  }
+  while( numRiga++ <  lato )
+	     putchar( ch );
   putchar( '\n' );
-  
+
   return 0;
 }
