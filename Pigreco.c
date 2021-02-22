@@ -34,14 +34,14 @@ int main( void ){
   scanf( "%d", &valore );
 
   for( passo = 0; passo < valore; passo++ ) {
-    exp = -exp;
+      exp = -exp;
 
-    if( exp == -1 )
-        pigreco = pigreco - 4.0/( float )denominatore;
-    else
-        pigreco = pigreco + 4.0/( float )denominatore;
+      if( exp == -1 )
+          pigreco = pigreco - 4.0/( float )denominatore;
+      else
+          pigreco = pigreco + 4.0/( float )denominatore;
 
-    denominatore += 2;
+      denominatore += 2;
   }
 
   printf( "PI : %f\n", pigreco );
