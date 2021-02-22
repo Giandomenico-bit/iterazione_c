@@ -8,14 +8,13 @@ numero intero, esegua il conto alla rovescia. */
 
 int main( void ){
 
-  int number;
+  int inizio;
 
   printf( "Da che numero devo partire : " );
-  scanf( "%d", &number );
+  scanf( "%d", &inizio );
 
-  for( int i = number; i > 0; i-- ){
-    printf( "%d\n", i );
-  }
+  for( int i = number; i > 0; i-- )
+       printf( "%d\n", i );
   printf( "%s\n", "Lanciato!" );
 
   return 0;
