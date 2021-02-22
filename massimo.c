@@ -7,23 +7,23 @@ in input 10 numeri e determini il maggiore. */
 
 int main( void ){
 
-  int max;
-  int number;
-  size_t i;
+  int max, numero, passo;
 
-  printf( "Inserisci numero : " );
-  scanf( "%d", &number );
-  max = number;
+  printf( "%s", "Inserisci numero : " );
+  scanf( "%d", &numero );
 
-  i = 0;
-  while( i < 9 ){
+  max = numero;
 
-    printf( "Inserisci numero : " );
-    scanf( "%d", &number );
+  passo = 0;
+  while( passo < 10 ) {
 
-    if( number > max ) max = number;
+    printf( "%s", "Inserisci numero : " );
+    scanf( "%d", &numero );
 
-    i++;
+    if( numero > max )
+        max = numero;
+
+    passo++;
   }
 
   printf( "Massimo : %d\n", max );
