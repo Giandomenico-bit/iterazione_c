@@ -21,23 +21,23 @@ Numero crittografato: 4589
 
 int main( void ){
 
-  int value;
+  int valore;
   int cifra1, cifra2, cifra3, cifra4;
 
   do{
 
-    printf( "Inserisci valore di 4 cifre : " );
-    scanf( "%d", &value );
+    printf( "%s", "Inserisci valore di 4 cifre : " );
+    scanf( "%d", &valore );
 
-  }while( value < 1000 || value > 9999 );
+  }while( valore < 1000 || valore > 9999 );
 
-  cifra4 = (( value % 10 ) + 7 ) % 10;
-  value = value / 10;
-  cifra3 = (( value % 10 ) + 7 ) % 10;
-  value = value / 10;
-  cifra2 = (( value % 10 ) + 7 ) % 10;
-  value = value / 10;
-  cifra1 = (( value % 10 ) + 7 ) % 10;
+  cifra4 = ( valore + 7 ) % 10;
+  value = valore / 10;
+  cifra3 = ( valore + 7 ) % 10;
+  valore = valore / 10;
+  cifra2 = ( valore + 7 ) % 10;
+  valore = valore / 10;
+  cifra1 = ( valore + 7 ) % 10;
 
   printf( "%d%d%d%d\n", cifra3, cifra4, cifra1, cifra2 );
 
