@@ -8,29 +8,25 @@ e poi lo disegni con un carattere a piacere. */
 
 int main( void ){
 
-  int ch;
-  int side;
-  size_t i, j;
+  char ch;
+  int lato, riga, colonna;
 
   printf( "Disegna un quadrato con : " );
-  scanf( "%lc", &ch );
+  scanf( "%c", &ch );
 
   do {
-
     printf( "Inserisci il lato ( min 1, max 20 ) : " );
-    scanf( "%d", &side );
+    scanf( "%d", &lato );
 
-  }while( side <= 0 || side > 20 );
+  } while( lato <= 0 || lato > 20 );
 
-  i = 1;
-  while( i <= side ){
-    j = 1;
-    while( j <= side ){
-       putchar( ch );
-      j++;
-    }
+  riga = 1;
+  while( riga++ <= lato ) {
+    colonna = 1;
+    while( colonna++ <= lato )
+        putchar( ch );
     putchar( '\n' );
-    i++;
   }
+  
   return 0;
 }
