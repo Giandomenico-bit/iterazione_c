@@ -11,11 +11,11 @@ int main( void ){
   char ch;
   int lato, riga, colonna;
 
-  printf( "Disegna un quadrato con : " );
+  printf( "%s", "Disegna un quadrato con : " );
   scanf( "%c", &ch );
 
   do {
-    printf( "Inserisci il lato ( min 1, max 20 ) : " );
+    printf( "%s", "Inserisci il lato ( min 1, max 20 ) : " );
     scanf( "%d", &lato );
 
   } while( lato <= 0 || lato > 20 );
@@ -27,6 +27,6 @@ int main( void ){
         putchar( ch );
     putchar( '\n' );
   }
-  
+
   return 0;
 }
