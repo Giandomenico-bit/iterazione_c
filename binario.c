@@ -30,6 +30,7 @@ int main( void ) {
 
   } while( flag == 1 );
 
+  temp = binario;
   somma = 0;
   potenza = 1;
 
@@ -46,7 +47,7 @@ int main( void ) {
 
   } while( binario != 0 );
 
-  printf( "Risultato : %d\n", somma );
+  printf( "%d(2) = %d(10)\n", temp, somma );
 
   return 0;
 }
