@@ -15,7 +15,7 @@ int main( void ){
   max = numero;
 
   passo = 0;
-  while( passo < 10 ) {
+  while( passo < 9 ) {
 
     printf( "%s", "Inserisci numero : " );
     scanf( "%d", &numero );
