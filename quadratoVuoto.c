@@ -33,23 +33,23 @@ int main( void ){
 
   // righe intermedie
   while( numRiga < lato ) {
-	  putchar( ch );
-    numRiga++;
-	  // Spazi
-	  numColonna = 1;
-	  while( numColonna < lato - 1 ) {
-		    putchar( ' ' );
+      putchar( ch );
+      numRiga++;
+      // Spazi
+      numColonna = 1;
+      while( numColonna < lato - 1 ) {
+        putchar( ' ' );
         numColonna++;
-    }
-	  putchar( ch );
-	  putchar( '\n' );
+      }
+      putchar( ch );
+      putchar( '\n' );
   }
 
   // ultima riga
   numRiga = 0;
   while( numRiga <  lato ) {
-	     putchar( ch );
-       numRiga++;
+      putchar( ch );
+      numRiga++;
   }
   putchar( '\n' );
 
