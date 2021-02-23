@@ -24,7 +24,7 @@ int main( void ){
   numRiga = 0;
   // Prima riga
   while( numRiga < lato ) {
-	   putchar( ch );
+     putchar( ch );
      numRiga++;
   }
   putchar( '\n' );
@@ -34,7 +34,6 @@ int main( void ){
   // righe intermedie
   while( numRiga < lato ) {
       putchar( ch );
-      numRiga++;
       // Spazi
       numColonna = 1;
       while( numColonna < lato - 1 ) {
@@ -43,6 +42,7 @@ int main( void ){
       }
       putchar( ch );
       putchar( '\n' );
+      numRiga++;
   }
 
   // ultima riga
