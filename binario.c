@@ -5,11 +5,10 @@ in input un numero binario e ne
 calcoli il corrispondente valore in decimale. */
 
 #include <stdio.h>
-#include <math.h>
 
 int main( void ) {
 
-  unsigned int binario, decimale, temp, somma, resto, esponente;
+  unsigned int binario, decimale, temp, somma, resto, potenza;
   unsigned flag = 0;
 
   do {
@@ -18,12 +17,11 @@ int main( void ) {
     scanf( "%u", &temp );
 
     binario = temp;
+    flag = 0;
 
     while( temp != 0 ) {
         resto = temp % 10;
-        if( resto == 1 || resto == 0 )
-            flag = 0;
-        else {
+        if( resto != 1 && resto != 0 ) {
             flag = 1;
             break;
         }
@@ -32,19 +30,18 @@ int main( void ) {
 
   } while( flag == 1 );
 
-  esponente = 0;
   somma = 0;
+  potenza = 1;
 
   do {
     // calcolo rest( binario, 10 )
     resto = binario % 10;
 
     // trasformo il numero in binario
-    decimale = pow( 2, esponente ) * resto;
+    decimale = potenza * resto;
     somma = somma + decimale;
 
-    // avanzo di una posizione
-    esponente++;
+    potenza = potenza * 2;
     binario = binario / 10;
 
   } while( binario != 0 );
