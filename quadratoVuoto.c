@@ -23,27 +23,34 @@ int main( void ){
 
   numRiga = 0;
   // Prima riga
-  while( numRiga++ < lato )
+  while( numRiga < lato ) {
 	   putchar( ch );
+     numRiga++;
+  }
   putchar( '\n' );
 
   numRiga = 2;
 
   // righe intermedie
-  while( numRiga++ < lato ) {
+  while( numRiga < lato ) {
 	  putchar( ch );
+    numRiga++;
 	  // Spazi
 	  numColonna = 1;
-	  while( numColonna++ < lato - 1 )
+	  while( numColonna < lato - 1 ) {
 		    putchar( ' ' );
+        numColonna++;
+    }
 	  putchar( ch );
 	  putchar( '\n' );
   }
 
   // ultima riga
   numRiga = 0;
-  while( numRiga++ <  lato )
+  while( numRiga <  lato ) {
 	     putchar( ch );
+       numRiga++;
+  }
   putchar( '\n' );
 
   return 0;
