@@ -31,7 +31,7 @@ int main( void ){
   } while( valore < 1000 || valore > 9999 );
 
   cifra4 = ( valore + 7 ) % 10;
-  value = valore / 10;
+  valore = valore / 10;
   cifra3 = ( valore + 7 ) % 10;
   valore = valore / 10;
   cifra2 = ( valore + 7 ) % 10;
