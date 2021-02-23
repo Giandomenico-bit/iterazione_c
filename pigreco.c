@@ -23,7 +23,7 @@ PI: 3.339683
 int main( void ){
 
   int valore, exp, passo, denominatore;;
-  float pigreco = 0.0;
+  double pigreco = 0.0;
 
   exp = -1;
   denominatore = 1;
@@ -34,13 +34,14 @@ int main( void ){
   scanf( "%d", &valore );
 
   for( passo = 0; passo < valore; passo++ ) {
+
       exp = -exp;
-
-      if( exp == -1 )
-          pigreco = pigreco - 4.0/( float )denominatore;
-      else
-          pigreco = pigreco + 4.0/( float )denominatore;
-
+      if( exp == -1 ) {
+          pigreco = pigreco - 4.0 / ( double )denominatore;
+      }
+      else {
+          pigreco = pigreco + 4.0 / ( double )denominatore;
+      }
       denominatore += 2;
   }
 
