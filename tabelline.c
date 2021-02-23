@@ -6,14 +6,16 @@ Si scriva un programma in C che stampi la tabella pitagorica. */
 
 int main( void ){
 
-  unsigned int riga;
-  unsigned int colonna;
+  unsigned int riga, colonna;
 
-  riga = 0;
-  while( riga++ < 10 ) {
-    colonna = 0;
-    while( colonna++ < 10 )
+  riga = 1;
+  while( riga < 11 ) {
+    colonna = 1;
+    while( colonna < 11 ) {
         printf( "%-5u ", riga * colonna );
+        colonna++;
+    }
+    riga++;
     putchar( '\n' );
   }
 
