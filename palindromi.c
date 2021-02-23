@@ -29,10 +29,12 @@ int main( void ){
   cifra4 = numero % 10;
   numero = numero / 10;
 
-  if( cifra1 == cifra4 && cifra3 == cifra2 )
-      printf( "Numero palindromo\n" );
-  else
-      printf( "Numero non palindromo\n" );
+  if( cifra1 == cifra4 && cifra3 == cifra2 ) {
+    printf( "Numero palindromo\n" );
+  }
+  else {
+    printf( "Numero non palindromo\n" );
+  }
 
   return 0;
 }
