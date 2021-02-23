@@ -16,10 +16,9 @@ int main( void ){
   scanf( "%d", &valore );
 
   while( valore != 0 ) {
-    
+
     cifra = valore % 10;
-    if( cifra == 7 )
-        count = count + 1;
+    if( cifra == 7 ) count = count + 1;
     valore = valore / 10;
   }
 
