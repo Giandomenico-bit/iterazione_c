@@ -23,10 +23,11 @@ Esempio di output:
 
 int main( void ){
 
-  int numero;
-  int fattoriale = 1;
+  int fattoriale, i;
 
-  for( int i = 1; i <= 5; i++ ){
+  fattoriale = 1;
+
+  for( i = 1; i <= 5; i++ ){
     fattoriale = fattoriale * i;
     printf( "%d! = %d\n", i, fattoriale );
   }
