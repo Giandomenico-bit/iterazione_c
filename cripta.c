@@ -24,12 +24,11 @@ int main( void ){
   int valore;
   int cifra1, cifra2, cifra3, cifra4;
 
-  do{
-
+  do {
     printf( "%s", "Inserisci valore di 4 cifre : " );
     scanf( "%d", &valore );
 
-  }while( valore < 1000 || valore > 9999 );
+  } while( valore < 1000 || valore > 9999 );
 
   cifra4 = ( valore + 7 ) % 10;
   value = valore / 10;
