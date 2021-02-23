@@ -21,10 +21,13 @@ int main( void ){
   } while( lato <= 0 || lato > 20 );
 
   riga = 1;
-  while( riga++ <= lato ) {
+  while( riga <= lato ) {
     colonna = 1;
-    while( colonna++ <= lato )
+    while( colonna <= lato ) {
         putchar( ch );
+        colonna++;
+    }
+    riga++;
     putchar( '\n' );
   }
 
