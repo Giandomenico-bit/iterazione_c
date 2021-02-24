@@ -9,10 +9,10 @@ dell'indirizzo di tutti gli elementi di un vettore di dieci interi.
 
 int main( void ) {
 
-  int array[ 10 ];
+  int c, array[ 10 ];
 
-  for( int c = 0; c < 10; c++ )
-      printf( "%p\n", &array[ c ] );
+  for( c = 0; c < 10; c++ )
+      printf( "%p\n", ( void * )&array[ c ] );
 
   return 0;
 }
