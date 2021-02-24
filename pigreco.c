@@ -27,14 +27,13 @@ int main( void ){
   printf( "%s", "Quanti termini vuoi utilizzare ? " );
   scanf( "%d", &termini );
 
-  segno = -1;
-  denominatore = 1;
+  denominatore = segno = 1;
   pigreco = 0.0;
 
   for( passo = 0; passo < termini; passo++ ) {
-      segno = -segno;
-      pigreco = pigreco + ( segno * ( 4.0 / ( double )denominatore ) );
-      denominatore += 2;
+       pigreco = pigreco + ( segno * ( 4.0 / ( double )denominatore ) );
+       denominatore = denominatore + 2;
+       segno = -segno;
   }
 
   printf( "PI : %f\n", pigreco );
