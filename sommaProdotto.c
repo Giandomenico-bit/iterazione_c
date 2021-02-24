@@ -7,12 +7,18 @@ dispari compresi tra 1 e 15. */
 
 int main( void ){
 
-  int i, sommaPari, prodottoDispari = 1;
+  int passo, sommaPari, prodottoDispari;
 
-  sommaPari = ( 30 * ( 30 + 2 ) ) / 4;
+  sommaPari = 0;
+  prodottoDispari = 1;
 
-  for( i = 1; i <= 15; i = i + 3 )
-       prodottoDispari = prodottoDispari * i;
+  for( passo = 0; passo < 31; passo = passo + 2 ) {
+       sommaPari = sommaPari + passo;
+  }
+
+  for( passo = 1; passo < 16; passo = passo + 2 ) {
+       prodottoDispari = prodottoDispari * passo;
+  }
 
   printf( "Somma : %d\n", sommaPari );
   printf( "Prodotto : %d\n", prodottoDispari );
