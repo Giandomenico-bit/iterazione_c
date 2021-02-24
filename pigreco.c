@@ -21,14 +21,15 @@ PI: 3.339683
 
 int main( void ){
 
-  int termini, segno, passo, denominatore;;
-  double pigreco;
+  int termini, passo, denominatore;;
+  double pigreco, segno;
 
   printf( "%s", "Quanti termini vuoi utilizzare ? " );
   scanf( "%d", &termini );
 
-  denominatore = segno = 1;
+  denominatore = 1;
   pigreco = 0.0;
+  segno = 1.0;
 
   for( passo = 0; passo < termini; passo++ ) {
        pigreco = pigreco + ( segno * ( 4.0 / ( double )denominatore ) );
